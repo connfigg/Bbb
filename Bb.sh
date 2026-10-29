@@ -235,7 +235,7 @@ deploy_new_service() {
     setup_artifact_registry "$REGION"
     IMAGE_TAG="${ARTIFACT_REGISTRY_URL}/hazel-maker-${ENGINE}:latest"
     RAND=$(openssl rand -hex 3)
-    CLOUD_RUN_SERVICE_NAME="gcp-xray-${ENGINE}-$RAND"
+    CLOUD_RUN_SERVICE_NAME="hazel-maker-${ENGINE}-$RAND"
 
     echo -e "\n${CYAN}=========================================${NC}"
     echo -e "${GREEN}📊 RESOURCE CONFIG MODE${NC}"
